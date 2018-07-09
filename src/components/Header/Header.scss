@@ -1,0 +1,143 @@
+@import "utils";
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  cursor: pointer;
+}
+
+.header {
+  height: 6.5rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+  .logo {
+    margin-top: 2rem;
+    cursor: pointer;
+  }
+  .menu-bar {
+    display: none;
+    cursor: pointer;
+    font-size: 3rem;
+    color: $oc-blue-9;
+  }
+
+  .header-line {
+    .header-top {
+      display: flex;
+      padding: 0.5rem;
+      margin-left: 20rem;
+
+      .top-menu {
+        margin-top: 0.6rem;
+      }
+
+      input {
+        background-color: $oc-gray-1;
+        border: none;
+        height: 1.7rem;
+        margin-left: 3rem;
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+        width: 8rem;
+        padding-top: 0.2rem;
+        padding-left: 0.2rem;
+      }
+      .search-icon {
+        color: $oc-blue-7;
+        font-size: 1.1rem;
+        background-color: $oc-gray-1;
+        height: 1.7rem;
+        margin-top: 0.3rem;
+        padding-right: 0.5rem;
+        padding-top: 0.2rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      ul {
+        display: flex;
+        li,
+        span {
+          font-size: 0.9rem;
+          margin-left: 0.5rem;
+          color: $oc-gray-6;
+        }
+
+        li {
+          &:hover {
+            color: $oc-blue-5;
+          }
+        }
+      }
+    }
+    .header-bottom {
+      margin-top: 0.5rem;
+      ul {
+        display: flex;
+        margin-left: 3.5rem;
+        li,
+        span {
+          font-size: 1.2rem;
+          margin-right: 2.5rem;
+        }
+        .blue {
+          color: $oc-blue-6;
+        }
+        li {
+          &:hover {
+            b {
+              border-bottom: 4px solid $oc-blue-6;
+              color: $oc-blue-6;
+              padding-bottom: 1rem;
+            }
+          }
+          .hide-menu {
+            z-index: 20;
+            position: absolute;
+            margin-top: 1.2rem;
+            padding-top: 1rem;
+            display: none;
+            font-size: 0.9rem;
+            margin-left: -1rem;
+            color: $oc-gray-7;
+            background-color: white;
+            div {
+              padding: 0.5rem;
+              padding-right: 5rem;
+              padding-left: 1rem;
+
+              &:hover {
+                color: white;
+                background-color: $oc-blue-7;
+              }
+            }
+          }
+          &:hover {
+            .hide-menu {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media("<large") {
+    .logo {
+      padding: 1.3rem;
+      margin: 0;
+    }
+    .menu-bar {
+      display: block;
+      margin-left: auto;
+      padding: 1rem;
+    }
+    .header-line {
+      display: none;
+    }
+  }
+}

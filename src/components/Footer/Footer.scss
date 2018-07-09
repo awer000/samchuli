@@ -1,0 +1,95 @@
+@import "utils";
+
+.footer {
+  background-color: #495860;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a0aab0;
+  font-size: 0.9rem;
+  .footer-content {
+    .white {
+      color: white;
+    }
+    .footer-top {
+      margin-left: -1.5rem;
+      display: flex;
+      margin-bottom: 1rem;
+      li,
+      span {
+        margin-right: 1rem;
+      }
+      li {
+        &:hover {
+          color: white;
+        }
+      }
+      @include media("<medium") {
+        margin-top: -5rem;
+        li,
+        span {
+          margin-right: 0.3rem;
+        }
+      }
+    }
+    .footer-bottom {
+      display: flex;
+      margin-top: 1rem;
+      margin-left: 1rem;
+      .address {
+        address {
+          font-style: normal;
+        }
+      }
+      .cert-logo {
+        img {
+          margin-left: 1rem;
+        }
+      }
+      @include media("<medium") {
+        & {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  .selector {
+    padding: 2rem;
+    margin-top: -3rem;
+    select {
+      width: 200px;
+      height: 30px;
+      padding-left: 10px;
+      font-size: 18px;
+      outline: none;
+    }
+    @include media("<medium") {
+      margin-top: auto;
+      margin-left: 0;
+    }
+  }
+
+  @include media("<400px") {
+    font-size: 0.6rem;
+    height: 15rem;
+    width: 100%;
+    .footer-content {
+      flex-direction: column;
+    }
+  }
+
+  @include media("<medium") {
+    flex-direction: column;
+    height: 15rem;
+    .footer-content {
+      padding-top: 5rem;
+      .footer-bottom {
+        .cert-logo {
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "~open-color/open-color";
+@import "~include-media/dist/include-media";
+
+$breakpoints: (
+  small: 320px,
+  medium: 768px,
+  large: 1024px,
+  wide: 1400px
+);
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
