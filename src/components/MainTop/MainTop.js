@@ -6,16 +6,14 @@ import Tex from "react-icons/lib/md/payment";
 import Emig from "react-icons/lib/md/event-note";
 import FormForm from "react-icons/lib/fa/sticky-note-o";
 import SearchIcon from "react-icons/lib/fa/search";
+import backgroundImg from "../../styles/img/background.jpg";
 
 const cx = classNames.bind(styles);
 
 const MainTop = () => (
   <div className={cx("main-top")}>
     <div className={cx("background-img")}>
-      <img
-        src="https://kr.best-wallpaper.net/wallpaper/1920x1080/1711/Wind-power-station-sea-boat_1920x1080.jpg"
-        alt="background"
-      />
+      <img src={backgroundImg} alt="background" />
     </div>
     <div className={cx("moto")}>
       <h1>
